@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function LibServices() {
     return (
         <>
@@ -10,7 +12,7 @@ export default function LibServices() {
                            Send us a message.
                         </p>
                         <div className="d-grid gap-2 justify-content-md-start mb-4 mb-lg-3">
-                            <a className="btn main-color btn-lg text-white" href="#">Sign up</a>
+                            <Link className="btn main-color btn-lg text-white" to="/signUp">Sign up</Link>
                         </div>
                     </div>
 

@@ -7,7 +7,7 @@ import CheckoutAndReviewBox from "./CheckoutAndReviewBox";
 import ReviewModel from "../../models/ReviewModel";
 import LatestReviews from "./LatestReviews";
 
-export default function BookCheckoutPage() {
+export default function BookCheckoutPage({ isLoadingUi } : { isLoadingUi?: any}) {
     const [currentBook, setCurrentBook] = useState<BookModel>();
     const [isLoading, setIsLoading] = useState(true);
     const [httpError, setHttpError] = useState(null);
@@ -17,6 +17,8 @@ export default function BookCheckoutPage() {
     const [reviews, setReviews] = useState<ReviewModel[]>([]);
     const [totalStars, setTotalStars] = useState(0);
     const [isLoadingReviews, setIsLoadingReviews] = useState(true);
+
+    isLoadingUi(true);
 
     const bookId = (window.location.pathname).split('/')[window.location.pathname.split('/').length - 1];
 
@@ -56,6 +58,7 @@ export default function BookCheckoutPage() {
 
     //Review useEffect to fetch reviews
     useEffect(() => {
+        window.scrollTo(0, 0);
         const fetchReviews = async () => {
             const reviewUrl: string = `http://localhost:8080/api/reviews/search/findByBookId?bookId=${bookId}`;
 
@@ -95,10 +98,12 @@ export default function BookCheckoutPage() {
 
             setReviews(loadedReviews);
             setIsLoadingReviews(false);
+            isLoadingUi(false);
         };
 
         fetchReviews().catch((error: any) => {
             setIsLoadingReviews(false);
+            isLoadingUi(false);
             setHttpError(error.message);
         });
 

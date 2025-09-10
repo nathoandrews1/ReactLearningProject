@@ -144,10 +144,10 @@ export default function SearchBookPage() {
                                 onClick={() => searchHandleChange()}>Search</button> */}
 
                             <div className='col-4'>
-                                <button id="dropDownMenuButton1" className='dropdown btn-outline-secondary dropdown-toggle'
+                                <button id="dropDownMenuButton1" className='dropdown text-white btn-outline-secondary dropdown-toggle dropdownBtnStyle'
                                     type='button' data-bs-toggle="dropdown" aria-expanded="false">{categorySelection}</button>
 
-                                <ul className='dropdown-menu' aria-labelledby='dropDownMenuButton1'>
+                                <ul className='dropdown-menu dropdownStyle' aria-labelledby='dropDownMenuButton1'>
                                     <li onClick={() => categoryField('All')}><a className='dropdown-item' href='#'>All</a></li>
                                     <li onClick={() => categoryField('FE')}><a className='dropdown-item' href='#'>Front End</a></li>
                                     <li onClick={() => categoryField('BE')}><a className='dropdown-item' href='#'>Back End</a></li>

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Heros() {
     return (
         <>
@@ -16,7 +18,7 @@ export default function Heros() {
                                 we will be able to provide top content for you!
                             </p>
 
-                            <a className="btn main-color btn-lg text-white btnOverride" href="#">Sign up</a>
+                            <Link className="btn main-color btn-lg text-white btnOverride" to="/signUp">Sign up</Link>
                         </div>
 
                     </div>
@@ -57,7 +59,7 @@ export default function Heros() {
                                 Whether it is to learn a new skill or grow within one,
                                 we will be able to provide top content for you!
                             </p>
-                            <a className="btn main-color btn-lg text-white btnOverride" href="#">Sign up</a>
+                            <Link className="btn main-color btn-lg text-white btnOverride" to="/signUp">Sign up</Link>
                         </div>
                     </div>
 

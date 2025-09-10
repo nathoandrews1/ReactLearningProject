@@ -23,7 +23,10 @@ export default function Review({ review }: { review: ReviewModel }) {
                         {dateRender}
                     </div>
                     <div className="col">
-                        <StarReview rating={review.rating} size={20} />
+                        <div className="float-end">
+                            <StarReview rating={review.rating} size={20} />
+                        </div>
+
                     </div>
                 </div>
 

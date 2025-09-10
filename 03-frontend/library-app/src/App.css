@@ -22,8 +22,8 @@
 }
 
 .btnOverride {
-   margin:0 auto;
-   margin-top:10px;
+    margin: 0 auto;
+    margin-top: 10px;
 }
 
 .hero-title {
@@ -77,12 +77,38 @@
     color: #0e76a8 !important;
 }
 
-/* .page-link-colorOverride:hover {
-    background-color: rgba(215, 215, 215, 0.5) !important;
-    color: rgba(14, 118, 168, 1) !important;
-
+.loadMoreReviewsBtn {
+    position: relative;
+    left: -15px;
 }
 
-.page-link-colorOverride:active {
-    border-color: red !important;
-} */
+.dropdownStyle {
+    max-height: 25%;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #0e76a8 #f1f1f1;
+    ;
+}
+
+.dropdownBtnStyle {
+    left:-5px;
+    margin-top: 1px;
+    text-align: left;
+    background-color: #0e76a8;
+    border-radius: 3px;
+    border-color: rgba(0, 0, 0, 0.0) !important;
+}
+
+.dropdownBtnStyle:hover {
+    background-color: #084d73;
+}
+
+.dropdownBtnStyle:focus {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.0) !important;
+}
+
+.dropdownBtnStyle.show {
+    background-color: #084d73 !important;
+    border-color: rgba(0, 0, 0, 0.0) !important;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.0) !important;
+}
