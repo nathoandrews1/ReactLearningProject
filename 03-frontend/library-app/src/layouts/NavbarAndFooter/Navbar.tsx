@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbar({ cartOpen, setCartOpen }: { cartOpen: boolean, setCartOpen: any }) {
     return (
         <>
         <nav className="navbar navbar-expand-lg navbar-dark main-color py-3">
@@ -19,11 +19,14 @@ export default function Navbar() {
                     <li className="nav-item">
                     <NavLink className="nav-link" to="/search">Search Books</NavLink>
                     </li>
+                    <li className="nav-item">
+                    <a type="button" className="nav-link" onClick={() => { setCartOpen(!cartOpen); }} style={{ cursor: 'pointer' }}> View Cart </a>
+                    </li>
                 </ul>
 
                 <ul className="navbar-nav ms-auto">
                     <li className="nav-item">
-                    <a type="button" className="btn btn-outline-light" href="#">Sign In</a>
+                    <a type="button" className="btn btn-outline-light" href="/login">Sign In</a>
                     </li>
                 </ul>
             </div>
